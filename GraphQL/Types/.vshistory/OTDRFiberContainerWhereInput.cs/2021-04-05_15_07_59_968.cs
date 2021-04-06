@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using AFL.OTDR.Server.Models;
+using HotChocolate.Types;
+
+namespace AFL.OTDR.Service.GraphQL.InternalOTDR 
+{
+	public class OtdrFiberContainerWhereInput : InputObjectType<OtdrFiberContainer>
+    {
+        public Guid FiberContainerID { get; set; }
+        
+        public List<OtdrFiberResult> Results { get; set; }
+    }
+}

@@ -1,0 +1,34 @@
+﻿
+type Query {
+stats: Foo
+}
+
+type Mutation {
+doABCD(where: ABCDWhere): String
+doABCDE(where: ABCDEWhere): String
+uniontest: FooBarBaz
+}
+
+input ABCDEWhere {
+abcd: ABCWhere
+}
+
+input ABCDWhere {
+abc: ABCWhere
+}
+
+input ABCWhere{
+abcString: String
+}
+
+union FooBarBaz = Foo | Bar | Baz
+
+type Foo {
+foo: String!
+}
+type Bar {
+bar: String!
+}
+type Baz {
+baz: String!
+}
